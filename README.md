@@ -44,7 +44,7 @@
 }
 ```
 
-
+### Linux
 ```shell
 bash bin/unidbg-fetch-qsign --basePath=txlib/8.9.63
 ```
@@ -58,7 +58,23 @@ bash bin/unidbg-fetch-qsign --basePath=txlib/8.9.63
 > ```dtconfig.json```是FEBound.java内数据的热更新版本，每个版本的QQ不同，可自行从```com.tencent.mobileqq.dt.model.FEBound```逆向得到。
 
 > --basePath=`/home/your_dir`
+### Windows
+1.先到txlib/8.9.63中确认Config文件中端口是否存在矛盾，可用10010等端口并保存
 
+2.同上解压文件，在项目根目录:
+> - your_dir<br>
+>     - bin<br>
+>     - lib<br>
+>     - txlib<br>
+
+3.该位置执行命令：
+
+```shell
+./bin/unidbg-fetch-qsign --basePath=txlib/8.9.63
+```
+命令行最后一行会给出签名服务器地址：```https://127.0.0.1:xxxxx```(本地签名服务器，网络签名服务器同理)
+
+4.将该地址填入go-cqhttp的config中```sign-server```配置项(如果没有说明gocq的版本过低，请到代码仓库下载新版)
 ## Docker部署
 
 [Dockerhub: xzhouqd/qsign](https://hub.docker.com/r/xzhouqd/qsign)

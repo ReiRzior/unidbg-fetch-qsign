@@ -72,9 +72,9 @@ bash bin/unidbg-fetch-qsign --basePath=txlib/8.9.63
 ```shell
 ./bin/unidbg-fetch-qsign --basePath=txlib/8.9.63
 ```
-命令行最后一行会给出签名服务器地址：```https://127.0.0.1:xxxxx```(本地签名服务器，网络签名服务器同理)
+命令行最后一行会给出签名服务器地址：```http://127.0.0.1:xxxxx```(本地签名服务器，网络签名服务器同理)
 
-4.将该地址填入go-cqhttp的config中```sign-server```配置项(如果没有说明gocq的版本过低，请到代码仓库下载新版)
+4.将该地址填入go-cqhttp的config中```sign-server```配置项(已成功案例来自于KomeiDiSanXian的1.1.3dev版本：https://github.com/Mrs4s/go-cqhttp/actions/runs/5504923059)
 ## Docker部署
 
 [Dockerhub: xzhouqd/qsign](https://hub.docker.com/r/xzhouqd/qsign)
